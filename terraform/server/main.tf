@@ -10,6 +10,7 @@ resource "aws_key_pair" "training" {
 }
 
 resource "aws_instance" "web" {
+  count                  = 2
   ami                    = "${var.ami}"
   instance_type          = "${var.instance_type}"
   subnet_id              = "${var.subnet_id}"
@@ -36,9 +37,9 @@ resource "aws_instance" "web" {
 }
 
 output "public_ip" {
-  value = "${aws_instance.web.public_ip}"
+  value = "${aws_instance.web.*.public_ip}"
 }
 
 output "public_dns" {
-  value = "${aws_instance.web.public_dns}"
+  value = "${aws_instance.web.*.public_dns}"
 }
