@@ -6,6 +6,7 @@ variable subnet_id {}
 variable vpc_security_group_id {}
 variable identity {}
 variable instance_type {}
+variable num_webs {}
 
 provider "aws" {
   access_key = "${var.access_key}"
@@ -24,6 +25,7 @@ module "server" {
   vpc_security_group_id = "${var.vpc_security_group_id}"
   identity              = "${var.identity}"
   instance_type         = "${var.instance_type}"
+  num_webs              = "${var.num_webs}"
 }
 
 output "public_ip" {
