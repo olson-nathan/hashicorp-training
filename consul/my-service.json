@@ -2,6 +2,10 @@
     "service": {
         "name": "my-service",
         "tags": ["tag-1", "tag-2"],
-        "port": 1234
+        "port": 1234,
+        "check": {
+            "tcp": "localhost:1234",
+            "interval": "10s"
+        }
     }
 }

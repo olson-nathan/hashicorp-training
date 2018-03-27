@@ -1,0 +1,27 @@
+{
+  "advertise_addr": "10.1.1.155",
+  "advertise_addr_wan": "54.67.71.71",
+  "bind_addr": "10.1.1.155",
+  "data_dir": "/mnt/consul",
+  "disable_update_check": true,
+  "encrypt": "ODhkY2ZjYzlhMDEzNmFiNTJkNzUyNjVmM2YxOTVlMGQ=",
+  "leave_on_terminate": true,
+  "node_name": "Hashi-032618-gopher",
+  "raft_protocol": 3,
+  "retry_join": ["provider=aws tag_key=ConsulJoin tag_value=Hashi-032618-46231ee954372d0fb7dd38f8e9c15373"],
+
+  "addresses": {
+    "http": "127.0.0.1",
+    "https": "10.1.1.155"
+  },
+  "ports": {
+    "http": 8500,
+    "https": 8533
+  },
+  "key_file": "/etc/ssl/certs/me.key",
+  "cert_file": "/etc/ssl/certs/me.crt",
+  "ca_file": "/usr/local/share/ca-certificates/01-me.crt",
+  "verify_server_hostname": true,
+  "verify_incoming": true,
+  "verify_outgoing": true
+}
