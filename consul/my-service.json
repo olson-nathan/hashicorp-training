@@ -1,0 +1,7 @@
+{
+    "service": {
+        "name": "my-service",
+        "tags": ["tag-1", "tag-2"],
+        "port": 1234
+    }
+}
